@@ -44,7 +44,7 @@ class TestFeatures(TestCase):
         data = [[0, 0], [0, 0], [1, 1], [1, 1]]
         expected = np.array([0.5, 0.5])
         scaler.fit(data)
-        assert (scaler.mean == expected).all(), "scaler fit does not return expected mean {}. Got {}".format(expected, scaler.mean)
+        assert (scaler.mean_ == expected).all(), "scaler fit does not return expected mean {}. Got {}".format(expected, scaler.mean)
 
     def test_standard_scaler_transform(self):
         scaler = StandardScaler()
